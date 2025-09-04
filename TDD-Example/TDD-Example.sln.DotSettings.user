@@ -1,0 +1,20 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=5267eb1c_002D8957_002D4e87_002D8d9c_002D13c28a39dbb0/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="NewVehicle_WhenValidParameters_ThenVehicleIsCreated" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Or&gt;&#xD;
+    &lt;TestAncestor&gt;&#xD;
+      &lt;TestId&gt;MSTest::66BA9304-93CA-4970-943D-0AC805ADBDB2::net8.0::Domain.Tests.VehicleTests.NewVehicle_WhenValidParameters_ThenVehicleIsCreated&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;MSTest::66BA9304-93CA-4970-943D-0AC805ADBDB2::net8.0::Domain.Tests.VehicleTests.NewVehicle_WhenInvalidDoorsAmount_ThenThrowsArgumentException&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;MSTest::66BA9304-93CA-4970-943D-0AC805ADBDB2::net8.0::Domain.Tests.VehicleTests.NewVehicle_WhenEmptyColor_ThenThrowsArgumentException&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;MSTest::66BA9304-93CA-4970-943D-0AC805ADBDB2::net8.0::Domain.Tests.VehicleTests.TurnOn_WhenCalled_ThenReturnsStrings&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;MSTest::66BA9304-93CA-4970-943D-0AC805ADBDB2::net8.0::Domain.Tests.TruckTests.TurnOn_WhenCalled_ThenReturnsCorrectString&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;MSTest::66BA9304-93CA-4970-943D-0AC805ADBDB2::net8.0::Domain.Tests.CarTests.TurnOn_WhenCalled_ThenReturnsCorrectString&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;MSTest::66BA9304-93CA-4970-943D-0AC805ADBDB2::net8.0::Domain.Tests.TruckTests&lt;/TestId&gt;&#xD;
+    &lt;/TestAncestor&gt;&#xD;
+    &lt;ProjectFile&gt;66BA9304-93CA-4970-943D-0AC805ADBDB2/f:CarTests.cs&lt;/ProjectFile&gt;&#xD;
+  &lt;/Or&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=e1160b01_002De261_002D412a_002D805e_002D609403f68843/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="NewVehicle_WhenValidParameters_ThenVehicleIsCreated #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;MSTest::66BA9304-93CA-4970-943D-0AC805ADBDB2::net8.0::Domain.Tests.VehicleTests.NewVehicle_WhenValidParameters_ThenVehicleIsCreated&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
