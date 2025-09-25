@@ -2,13 +2,18 @@
 
 namespace Repository;
 
-public class InMemoryDatabase
+public class MovieRepository
 {
     public List<Movie> MovieDatabase { get; set; }
 
-    public InMemoryDatabase()
+    public MovieRepository()
     {
         MovieDatabase = new List<Movie>();
+    }
+    
+    public void AddMovie(Movie movie)
+    {
+        MovieDatabase.Add(movie);
     }
     
 }

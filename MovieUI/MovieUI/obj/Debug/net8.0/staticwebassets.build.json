@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "1md6l7dsEvTqkzJbx00ARQGlx0XmGNmOYeUp+LDpJf0=",
+  "Hash": "Z7raRKhRvQyBeJYn8/I/TkQN7adccbE/JXNap9ityvA=",
   "Source": "MovieUI",
   "BasePath": "_content/MovieUI",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "MovieUI\\wwwroot",
       "Source": "MovieUI",
-      "ContentRoot": "C:\\Users\\alumnoFI.FACULTADES\\RiderProjects\\MovieUI\\MovieUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\mgonz\\M5A-ID-TEC-02.2025\\MovieUI\\MovieUI\\wwwroot\\",
       "BasePath": "_content/MovieUI",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\alumnoFI.FACULTADES\\RiderProjects\\MovieUI\\MovieUI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\MovieUI.styles.css",
+      "Identity": "C:\\Users\\mgonz\\M5A-ID-TEC-02.2025\\MovieUI\\MovieUI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\MovieUI.styles.css",
       "SourceId": "MovieUI",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\alumnoFI.FACULTADES\\RiderProjects\\MovieUI\\MovieUI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\mgonz\\M5A-ID-TEC-02.2025\\MovieUI\\MovieUI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/MovieUI",
       "RelativePath": "MovieUI.styles.css",
       "AssetKind": "All",
@@ -33,13 +33,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\alumnoFI.FACULTADES\\RiderProjects\\MovieUI\\MovieUI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\MovieUI.styles.css"
+      "OriginalItemSpec": "C:\\Users\\mgonz\\M5A-ID-TEC-02.2025\\MovieUI\\MovieUI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\MovieUI.styles.css"
     },
     {
-      "Identity": "C:\\Users\\alumnoFI.FACULTADES\\RiderProjects\\MovieUI\\MovieUI\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MovieUI.bundle.scp.css",
+      "Identity": "C:\\Users\\mgonz\\M5A-ID-TEC-02.2025\\MovieUI\\MovieUI\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MovieUI.bundle.scp.css",
       "SourceId": "MovieUI",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\alumnoFI.FACULTADES\\RiderProjects\\MovieUI\\MovieUI\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\mgonz\\M5A-ID-TEC-02.2025\\MovieUI\\MovieUI\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/MovieUI",
       "RelativePath": "MovieUI.bundle.scp.css",
       "AssetKind": "All",
@@ -52,13 +52,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\alumnoFI.FACULTADES\\RiderProjects\\MovieUI\\MovieUI\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MovieUI.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\mgonz\\M5A-ID-TEC-02.2025\\MovieUI\\MovieUI\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MovieUI.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\alumnoFI.FACULTADES\\RiderProjects\\MovieUI\\MovieUI\\wwwroot\\app.css",
+      "Identity": "C:\\Users\\mgonz\\M5A-ID-TEC-02.2025\\MovieUI\\MovieUI\\wwwroot\\app.css",
       "SourceId": "MovieUI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alumnoFI.FACULTADES\\RiderProjects\\MovieUI\\MovieUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\mgonz\\M5A-ID-TEC-02.2025\\MovieUI\\MovieUI\\wwwroot\\",
       "BasePath": "_content/MovieUI",
       "RelativePath": "app.css",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot\\app.css"
     },
     {
-      "Identity": "C:\\Users\\alumnoFI.FACULTADES\\RiderProjects\\MovieUI\\MovieUI\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Identity": "C:\\Users\\mgonz\\M5A-ID-TEC-02.2025\\MovieUI\\MovieUI\\wwwroot\\bootstrap\\bootstrap.min.css",
       "SourceId": "MovieUI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alumnoFI.FACULTADES\\RiderProjects\\MovieUI\\MovieUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\mgonz\\M5A-ID-TEC-02.2025\\MovieUI\\MovieUI\\wwwroot\\",
       "BasePath": "_content/MovieUI",
       "RelativePath": "bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\alumnoFI.FACULTADES\\RiderProjects\\MovieUI\\MovieUI\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "C:\\Users\\mgonz\\M5A-ID-TEC-02.2025\\MovieUI\\MovieUI\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "MovieUI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alumnoFI.FACULTADES\\RiderProjects\\MovieUI\\MovieUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\mgonz\\M5A-ID-TEC-02.2025\\MovieUI\\MovieUI\\wwwroot\\",
       "BasePath": "_content/MovieUI",
       "RelativePath": "bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\alumnoFI.FACULTADES\\RiderProjects\\MovieUI\\MovieUI\\wwwroot\\favicon.png",
+      "Identity": "C:\\Users\\mgonz\\M5A-ID-TEC-02.2025\\MovieUI\\MovieUI\\wwwroot\\favicon.png",
       "SourceId": "MovieUI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\alumnoFI.FACULTADES\\RiderProjects\\MovieUI\\MovieUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\mgonz\\M5A-ID-TEC-02.2025\\MovieUI\\MovieUI\\wwwroot\\",
       "BasePath": "_content/MovieUI",
       "RelativePath": "favicon.png",
       "AssetKind": "All",

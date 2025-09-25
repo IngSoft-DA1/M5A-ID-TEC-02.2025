@@ -5,16 +5,16 @@ namespace Services;
 
 public class MovieService
 {
-    private readonly InMemoryDatabase _inMemoryDatabase;
+    private MovieRepository _movieRepository;
 
-    public MovieService(InMemoryDatabase inMemoryDatabase)
+    public MovieService(MovieRepository movieRepository)
     {
-        _inMemoryDatabase = inMemoryDatabase;
+        _movieRepository = movieRepository;
     }
 
     public void AddMovie(Movie movie)
     {
-        _inMemoryDatabase.MovieDatabase.Add(movie);
+        _movieRepository.AddMovie(movie);
     }
     
 }
