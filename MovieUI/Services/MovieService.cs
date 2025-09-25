@@ -16,5 +16,22 @@ public class MovieService
     {
         _movieRepository.AddMovie(movie);
     }
+
+    public List<Movie> GetMovies()
+    {
+        return _movieRepository.GetMovies();
+    }
+
+    public void UpdateMovie(Movie movieWithUpdatedData)
+    {
+        //Logica para validar que este correcto contra la db
+        _movieRepository.UpdateMovie(movieWithUpdatedData);
+    }
     
+    public Movie GetMovieByTitle(string title)
+    {
+        return _movieRepository.GetMovieByTitle(title);
+    }
+    
+
 }

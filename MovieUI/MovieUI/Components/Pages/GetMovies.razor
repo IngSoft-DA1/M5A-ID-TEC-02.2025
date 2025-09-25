@@ -2,32 +2,43 @@
 @using Domain
 @using Services
 
+@inject MovieService MovieServiceInjected
+@inject NavigationManager NavigationManagerInjected
 
-<h1>Movie List</h1>
 
-<table class="table">
-    <thead>
-    <tr>
-        <th>Title</th>
-        <th>Director</th>
-        <th>Release Date</th>
-        <th>Update</th>
-        <th>Delete</th>
-    </tr>
-    </thead>
-    <tbody>
-    @foreach (var movie in movies)
-    {
+@if (movies is null || movies.Count==0)
+{
+    <h1>No hay datos</h1>
+}
+else
+{
+
+    <h1>Movie List</h1>
+    
+    <table class="table">
+        <thead>
         <tr>
-            <td>@movie.Title</td>
-            <td>@movie.Director</td>
-            <td>@movie.ReleaseDate.Year/@movie.ReleaseDate.Month/@movie.ReleaseDate.Day</td>
-            <td><button type="button" class="btn btn-primary" @onclick="() => OnUpdate(movie.Title)">Update</button></td>
-            <td><button type="button" class="btn btn-secondary" @onclick="() => OnDelete(movie.Title)">Delete</button></td>
+            <th>Title</th>
+            <th>Director</th>
+            <th>Release Date</th>
+            <th>Update</th>
+            <th>Delete</th>
         </tr>
-    }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+        @foreach (var movie in movies)
+        {
+            <tr>
+                <td>@movie.Title</td>
+                <td>@movie.Director</td>
+                <td>@movie.ReleaseDate.Year/@movie.ReleaseDate.Month/@movie.ReleaseDate.Day</td>
+                <td><button type="button" class="btn btn-primary" @onclick="() => OnUpdate(movie.Title)">Update</button></td>
+                <td><button type="button" class="btn btn-secondary" @onclick="() => OnDelete(movie.Title)">Delete</button></td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
 
 @code {
     
@@ -35,12 +46,13 @@
     
     protected override void OnInitialized()
     {
-        
+        movies = MovieServiceInjected.GetMovies();
     }
 
     public void OnUpdate(string title)
     {
-        
+        string movieTitle = title;
+        NavigationManagerInjected.NavigateTo("update-movie/" + movieTitle);
     }
     
     public void OnDelete(string title)
