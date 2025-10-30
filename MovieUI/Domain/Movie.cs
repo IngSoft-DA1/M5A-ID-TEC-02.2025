@@ -2,7 +2,8 @@
 
 public class Movie
 {
-    public string Title { get; set; } // Primary key
+    public int Id { get; set; }
+    public string Title { get; set; }
     public string Director { get; set; }
     public DateTime ReleaseDate { get; set; }
 
@@ -12,7 +13,4 @@ public class Movie
         Director = director;
         ReleaseDate = releaseDate;
     }
-    
-    //Validaciones sobre las misma properties
-    //Metodo= validarLargoTitulo
 }

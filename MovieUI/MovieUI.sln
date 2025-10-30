@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Repository\Repository.csproj", "{0A442D37-BCB4-469B-972C-3D7BD0D69C94}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryTests", "RepositoryTests\RepositoryTests.csproj", "{CD276919-0AEB-4425-9791-C049C9D95D44}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{0A442D37-BCB4-469B-972C-3D7BD0D69C94}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0A442D37-BCB4-469B-972C-3D7BD0D69C94}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0A442D37-BCB4-469B-972C-3D7BD0D69C94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD276919-0AEB-4425-9791-C049C9D95D44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD276919-0AEB-4425-9791-C049C9D95D44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD276919-0AEB-4425-9791-C049C9D95D44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD276919-0AEB-4425-9791-C049C9D95D44}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

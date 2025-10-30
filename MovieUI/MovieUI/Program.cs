@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore;
 using MovieUI.Components;
 using Repository;
 using Services;
@@ -8,8 +9,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
-builder.Services.AddSingleton<MovieRepository>();
-builder.Services.AddSingleton<MovieService>();
+builder.Services.AddDbContext<SqlContext>(options => options.UseSqlServer("name=ConnectionStrings:DefaultConnection"));
+
+builder.Services.AddScoped<MovieRepository>();
+builder.Services.AddScoped<MovieService>();
 
 var app = builder.Build();
 

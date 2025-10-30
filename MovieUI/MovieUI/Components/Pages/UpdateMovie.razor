@@ -28,14 +28,14 @@
 
 @code {
 
-    public Movie movie { get; set; }
+    public Movie? movie { get; set; }
     
     [Parameter]
     public string movieTitle { get; set; }
 
     protected override void OnInitialized()
     {
-        movie = MovieServiceInjected.GetMovieByTitle(movieTitle);
+        movie = MovieServiceInjected.GetMovie(m => m.Title == movieTitle);
     }
 
     public void OnSubmit()

@@ -33,7 +33,7 @@ else
                 <td>@movie.Director</td>
                 <td>@movie.ReleaseDate.Year/@movie.ReleaseDate.Month/@movie.ReleaseDate.Day</td>
                 <td><button type="button" class="btn btn-primary" @onclick="() => OnUpdate(movie.Title)">Update</button></td>
-                <td><button type="button" class="btn btn-secondary" @onclick="() => OnDelete(movie.Title)">Delete</button></td>
+                <td><button type="button" class="btn btn-secondary" @onclick="() => OnDelete(movie.Id)">Delete</button></td>
             </tr>
         }
         </tbody>
@@ -46,6 +46,11 @@ else
     
     protected override void OnInitialized()
     {
+        LoadMovies();
+    }
+
+    public void LoadMovies()
+    {
         movies = MovieServiceInjected.GetMovies();
     }
 
@@ -55,9 +60,10 @@ else
         NavigationManagerInjected.NavigateTo("update-movie/" + movieTitle);
     }
     
-    public void OnDelete(string title)
+    public void OnDelete(int id)
     {
-        
+        MovieServiceInjected.DeleteMovie(id);
+        LoadMovies();
     }
 
 

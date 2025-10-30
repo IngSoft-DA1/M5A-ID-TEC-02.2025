@@ -22,15 +22,19 @@ public class MovieService
         return _movieRepository.GetMovies();
     }
 
+    public void DeleteMovie(int id)
+    {
+        _movieRepository.DeleteMovie(id);
+    }
+
     public void UpdateMovie(Movie movieWithUpdatedData)
     {
-        //Logica para validar que este correcto contra la db
         _movieRepository.UpdateMovie(movieWithUpdatedData);
     }
     
-    public Movie GetMovieByTitle(string title)
+    public Movie? GetMovie(Func<Movie, bool> predicate)
     {
-        return _movieRepository.GetMovieByTitle(title);
+        return _movieRepository.GetMovie(predicate);
     }
     
 
