@@ -1,5 +1,4 @@
 ﻿@page "/update-movie/{movieTitle}"
-@using Domain
 @using Services
 
 @inject MovieService MovieServiceInjected
@@ -28,14 +27,21 @@
 
 @code {
 
-    public Movie? movie { get; set; }
+    private MovieDto movie = new MovieDto();
     
     [Parameter]
-    public string movieTitle { get; set; }
+    public string movieTitle { get; set; } = string.Empty;
 
     protected override void OnInitialized()
     {
-        movie = MovieServiceInjected.GetMovie(m => m.Title == movieTitle);
+        var movieFromService = MovieServiceInjected.GetMovieByTitle(movieTitle);
+        if (movieFromService is null)
+        {
+            NavigationManagerInjected.NavigateTo("/get-movies");
+            return;
+        }
+
+        movie = movieFromService;
     }
 
     public void OnSubmit()

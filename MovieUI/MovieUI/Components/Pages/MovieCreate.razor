@@ -1,5 +1,4 @@
 ﻿@page "/add-movie"
-@using Domain
 @using Services
 
 @inject NavigationManager NavigationManager
@@ -36,13 +35,13 @@
 </EditForm>
 
 @code {
-    private Movie movie;
-    private bool alertVisible = false;
-    private string alertMessage = "";
+    private MovieDto movie = new MovieDto();
+    private bool alertVisible;
+    private string alertMessage = string.Empty;
 
     protected override void OnInitialized()
     {
-        movie = new Movie("", "", DateTime.Now);
+        movie.ReleaseDate = DateTime.Now;
     }
 
     private void OnSubmit()

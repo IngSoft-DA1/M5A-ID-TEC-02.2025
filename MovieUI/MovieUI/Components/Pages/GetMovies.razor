@@ -1,5 +1,4 @@
 ﻿@page "/get-movies"
-@using Domain
 @using Services
 
 @inject MovieService MovieServiceInjected
@@ -21,6 +20,7 @@ else
             <th>Title</th>
             <th>Director</th>
             <th>Release Date</th>
+            <th>Actors</th>
             <th>Update</th>
             <th>Delete</th>
         </tr>
@@ -32,6 +32,7 @@ else
                 <td>@movie.Title</td>
                 <td>@movie.Director</td>
                 <td>@movie.ReleaseDate.Year/@movie.ReleaseDate.Month/@movie.ReleaseDate.Day</td>
+                <td><button type="button" class="btn btn-outline-info" @onclick="() => OnViewActors(movie.Id)">View Actors</button></td>
                 <td><button type="button" class="btn btn-primary" @onclick="() => OnUpdate(movie.Title)">Update</button></td>
                 <td><button type="button" class="btn btn-secondary" @onclick="() => OnDelete(movie.Id)">Delete</button></td>
             </tr>
@@ -42,7 +43,7 @@ else
 
 @code {
     
-    private List<Movie> movies;
+    private List<MovieDto> movies = new();
     
     protected override void OnInitialized()
     {
@@ -58,6 +59,11 @@ else
     {
         string movieTitle = title;
         NavigationManagerInjected.NavigateTo("update-movie/" + movieTitle);
+    }
+
+    public void OnViewActors(int movieId)
+    {
+        NavigationManagerInjected.NavigateTo($"get-actors/{movieId}");
     }
     
     public void OnDelete(int id)

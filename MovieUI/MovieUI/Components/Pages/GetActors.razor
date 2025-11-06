@@ -1,0 +1,72 @@
+@page "/get-actors/{movieId:int}"
+@using Services
+
+@inject MovieService MovieServiceInjected
+@inject NavigationManager NavigationManagerInjected
+
+<h1>Actors</h1>
+
+@if (movie is null)
+{
+    <p>Loading actors...</p>
+}
+else
+{
+    <div class="d-flex align-items-center mb-3">
+        <h3 class="me-3 mb-0">@movie.Title</h3>
+        <button type="button" class="btn btn-primary" @onclick="OnAddActor">Add Actor</button>
+    </div>
+
+    if (movie.Actors is null || movie.Actors.Count == 0)
+    {
+        <p>No actors registered for this movie.</p>
+    }
+    else
+    {
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Character</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var actor in movie.Actors)
+            {
+                <tr>
+                    <td>@actor.Name</td>
+                    <td>@actor.Character</td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    }
+
+    <button type="button" class="btn btn-secondary mt-3" @onclick="OnBack">Back to Movies</button>
+}
+
+@code {
+    private MovieDto? movie;
+
+    [Parameter]
+    public int movieId { get; set; }
+
+    protected override void OnInitialized()
+    {
+        movie = MovieServiceInjected.GetMovieById(movieId);
+        if (movie is null)
+        {
+            NavigationManagerInjected.NavigateTo("/get-movies");
+        }
+    }
+
+    private void OnBack()
+    {
+        NavigationManagerInjected.NavigateTo("/get-movies");
+    }
+
+    private void OnAddActor()
+    {
+        NavigationManagerInjected.NavigateTo($"/add-actor/{movieId}");
+    }
+}

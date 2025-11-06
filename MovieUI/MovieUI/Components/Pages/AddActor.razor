@@ -1,0 +1,58 @@
+@page "/add-actor/{movieId:int}"
+@using Services
+@inject MovieService MovieServiceInjected
+@inject NavigationManager NavigationManagerInjected
+
+<h2>Add Actor</h2>
+
+@if (movie is null)
+{
+    <p>Loading movie...</p>
+}
+else
+{
+    <p>Movie: <strong>@movie.Title</strong></p>
+
+    <EditForm Model="@actor" OnValidSubmit="OnSubmit">
+        <DataAnnotationsValidator/>
+        <div class="form-group">
+            <label for="actor-name">Name</label>
+            <input id="actor-name" class="form-control" @bind="actor.Name"/>
+            <ValidationMessage For="@(() => actor.Name)"/>
+        </div>
+        <div class="form-group mt-2">
+            <label for="actor-character">Character</label>
+            <input id="actor-character" class="form-control" @bind="actor.Character"/>
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">Save</button>
+        <button type="button" class="btn btn-secondary mt-3" @onclick="OnCancel">Cancel</button>
+    </EditForm>
+}
+
+@code {
+    private MovieDto? movie;
+    private ActorDto actor = new ActorDto();
+
+    [Parameter]
+    public int movieId { get; set; }
+
+    protected override void OnInitialized()
+    {
+        movie = MovieServiceInjected.GetMovieById(movieId);
+        if (movie is null)
+        {
+            NavigationManagerInjected.NavigateTo("/get-movies");
+        }
+    }
+
+    private void OnSubmit()
+    {
+        MovieServiceInjected.AddActor(movieId, actor);
+        NavigationManagerInjected.NavigateTo($"/get-actors/{movieId}");
+    }
+
+    private void OnCancel()
+    {
+        NavigationManagerInjected.NavigateTo($"/get-actors/{movieId}");
+    }
+}

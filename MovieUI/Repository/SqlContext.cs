@@ -12,4 +12,10 @@ public class SqlContext : DbContext
     {
        if(!Database.IsInMemory()) Database.Migrate();
     }
+    
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        base.OnModelCreating(modelBuilder);
+        
+    }
 }

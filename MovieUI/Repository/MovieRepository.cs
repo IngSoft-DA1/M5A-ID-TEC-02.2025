@@ -1,4 +1,7 @@
-﻿using Domain;
+﻿using System.Collections.Generic;
+using System.Linq;
+using Domain;
+using Microsoft.EntityFrameworkCore;
 
 namespace Repository;
 
@@ -19,15 +22,20 @@ public class MovieRepository
 
     public void DeleteMovie(int movieId)
     {
-        Movie? movie = _context.Movie.Find(movieId);
+        Movie? movie = _context.Movie
+            .FirstOrDefault(m => m.Id == movieId);
         if(movie == null) throw new KeyNotFoundException();
+
         _context.Movie.Remove(movie);
         _context.SaveChanges();
     }
 
     public List<Movie> GetMovies()
     {
-        return _context.Movie.ToList();
+        return _context.Movie
+            .AsNoTracking()
+            .Include(movie => movie.Actors)
+            .ToList();
     }
 
     public void UpdateMovie(Movie movieWithUpdatedData)
@@ -38,7 +46,9 @@ public class MovieRepository
     
     public Movie? GetMovie(Func<Movie, bool> predicate)
     {
-        return _context.Movie.FirstOrDefault(predicate);
+        return _context.Movie
+            .Include(movie => movie.Actors)
+            .FirstOrDefault(predicate);
     }
 
 }
