@@ -16,6 +16,7 @@ public class SqlContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
-        
+        modelBuilder.Entity<Movie>().HasMany(m => m.Actors).WithOne(a => a.Movie).OnDelete(DeleteBehavior.Cascade);
+        modelBuilder.Entity<Movie>().HasOne(m => m.LeadActor).WithMany();   
     }
 }
