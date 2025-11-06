@@ -36,7 +36,6 @@ public class MovieService
     {
         var movieOriginal = _movieRepository.GetMovie(m => m.Id == movieWithUpdatedData.Id);
         if(movieOriginal == null) throw new KeyNotFoundException($"Movie was not found.");
-        movieOriginal.Actors = movieWithUpdatedData.Actors.Select(a => a.ToEntity()).ToList();
         movieOriginal.Title = movieWithUpdatedData.Title;
         movieOriginal.Director = movieWithUpdatedData.Director;
         movieOriginal.ReleaseDate = movieWithUpdatedData.ReleaseDate;
